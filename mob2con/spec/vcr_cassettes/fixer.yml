@@ -1,0 +1,572 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Aug 2019 12:01:50 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - 291fb5a1-9e58-47c3-a3a7-3411037c72cb
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.007'
+    body:
+      encoding: UTF-8
+      string: '{"success":false,"error":{"code":101,"type":"missing_access_key","info":"You
+        have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]"}}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2019 12:01:49 GMT
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest?access_key=5cb64b4e834dd5796afe6f040914b99d&base=EUR&symbols=BRL,USD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Aug 2019 12:05:38 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - 527dc1b7-070e-47e4-ae31-4b9fb8d35f96
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Last-Modified:
+      - Thu, 08 Aug 2019 11:45:06 GMT
+      Etag:
+      - e6bc2c193d1297854844c73b5b61550f
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.043'
+    body:
+      encoding: UTF-8
+      string: '{"success":true,"timestamp":1565264706,"base":"EUR","date":"2019-08-08","rates":{"BRL":4.441469,"USD":1.119294}}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2019 12:05:37 GMT
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest?access_key=INVALID_KEY&base=EUR&symbols=BRL,USD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Aug 2019 12:06:32 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - 93c84ea8-d994-4cbc-a041-e0b2b086b704
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.010'
+    body:
+      encoding: UTF-8
+      string: '{"success":false,"error":{"code":101,"type":"invalid_access_key","info":"You
+        have not supplied a valid API Access Key. [Technical Support: support@apilayer.com]"}}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2019 12:06:31 GMT
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest?access_key=5cb64b4e834dd5796afe6f040914b99d&base=INV&symbols=BRL,USD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Aug 2019 12:09:07 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - d65212f8-0382-416b-a589-61a1db0f50bd
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Etag:
+      - ac0442f487c521fc5d08cd7bff5361dd
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.026'
+    body:
+      encoding: UTF-8
+      string: '{"success":false,"error":{"code":201,"type":"invalid_base_currency"}}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2019 12:09:06 GMT
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest?access_key=5cb64b4e834dd5796afe6f040914b99d&base=BRL&symbols=INV
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Aug 2019 12:09:07 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - b06a8893-9244-461b-bbb4-8915a6051a6f
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Etag:
+      - 7d66ba82c2aa525285346e332298bf30
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.019'
+    body:
+      encoding: UTF-8
+      string: '{"success":false,"error":{"code":105,"type":"base_currency_access_restricted"}}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2019 12:09:06 GMT
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest?access_key=5cb64b4e834dd5796afe6f040914b99d&base=EUR&symbols=INV
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Aug 2019 12:16:25 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - 39ffa6cf-17ae-4987-8de6-6f97a16df983
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Etag:
+      - 4535eac96468c2505e1a23347a608de1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.044'
+    body:
+      encoding: UTF-8
+      string: '{"success":false,"error":{"code":202,"type":"invalid_currency_codes","info":"You
+        have provided one or more invalid Currency Codes. [Required format: currencies=EUR,USD,GBP,...]"}}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2019 12:16:24 GMT
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest?access_key=5cb64b4e834dd5796afe6f040914b99d&base=USD&symbols=BRL,USD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Aug 2019 12:29:41 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - f1182ec1-9e34-4ec3-8154-2dcaeca2fca2
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Etag:
+      - 7d66ba82c2aa525285346e332298bf30
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.031'
+    body:
+      encoding: UTF-8
+      string: '{"success":false,"error":{"code":105,"type":"base_currency_access_restricted"}}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2019 12:29:40 GMT
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest?access_key=5cb64b4e834dd5796afe6f040914b99d&base=EU&symbols=BRL,USD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Aug 2019 12:32:28 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - 22750180-9f6d-4465-ae4e-ac244029bcaa
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Etag:
+      - ac0442f487c521fc5d08cd7bff5361dd
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.154'
+    body:
+      encoding: UTF-8
+      string: '{"success":false,"error":{"code":201,"type":"invalid_base_currency"}}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2019 12:32:27 GMT
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest?access_key=5cb64b4e834dd5796afe6f040914b99d&base=EUR&symbols=BRL,INV
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Aug 2019 12:46:49 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - 0c0f28e4-26c9-4404-9917-b8b0dbb029b2
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Last-Modified:
+      - Thu, 08 Aug 2019 12:40:06 GMT
+      Etag:
+      - b8f41092250c65696292f8a31459cf9b
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.055'
+    body:
+      encoding: UTF-8
+      string: '{"success":true,"timestamp":1565268006,"base":"EUR","date":"2019-08-08","rates":{"BRL":4.422119}}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2019 12:46:48 GMT
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest?access_key=5cb64b4e834dd5796afe6f040914b99d&base=EUR&symbols=BRL,USD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Aug 2019 12:51:37 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - c0c767d4-ceb9-4547-99e7-08c8cc724175
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Last-Modified:
+      - Thu, 08 Aug 2019 12:40:06 GMT
+      Etag:
+      - b91af594767d7e2ac4bc58ffb3dfd48c
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.030'
+    body:
+      encoding: UTF-8
+      string: '{"success":true,"timestamp":1565268006,"base":"EUR","date":"2019-08-08","rates":{"BRL":4.422119,"USD":1.119069}}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2019 12:51:36 GMT
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest?access_key=5cb64b4e834dd5796afe6f040914b99d&base&symbols=BRL,USD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Aug 2019 13:19:55 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - 5236166d-566a-497a-af69-4e620bd7b37b
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Last-Modified:
+      - Thu, 08 Aug 2019 12:40:06 GMT
+      Etag:
+      - b91af594767d7e2ac4bc58ffb3dfd48c
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.054'
+    body:
+      encoding: UTF-8
+      string: '{"success":true,"timestamp":1565268006,"base":"EUR","date":"2019-08-08","rates":{"BRL":4.422119,"USD":1.119069}}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2019 13:19:54 GMT
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest?access_key=5cb64b4e834dd5796afe6f040914b99d&base&symbols=BRL,INV
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Aug 2019 13:19:56 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - 3b8c1269-9302-4f51-9580-522487039624
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Last-Modified:
+      - Thu, 08 Aug 2019 12:40:06 GMT
+      Etag:
+      - b8f41092250c65696292f8a31459cf9b
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.029'
+    body:
+      encoding: UTF-8
+      string: '{"success":true,"timestamp":1565268006,"base":"EUR","date":"2019-08-08","rates":{"BRL":4.422119}}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2019 13:19:55 GMT
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest?access_key=5cb64b4e834dd5796afe6f040914b99d&base&symbols=INV
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Aug 2019 13:19:56 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - 16814eb7-73cd-450e-bb47-3c6ecc1816e4
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Etag:
+      - 4535eac96468c2505e1a23347a608de1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.031'
+    body:
+      encoding: UTF-8
+      string: '{"success":false,"error":{"code":202,"type":"invalid_currency_codes","info":"You
+        have provided one or more invalid Currency Codes. [Required format: currencies=EUR,USD,GBP,...]"}}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2019 13:19:55 GMT
+recorded_with: VCR 5.0.0

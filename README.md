@@ -48,7 +48,7 @@ Content-Type: application/json
 
 Após subir a aplicação, é necessário efetuar login para conseguir um token válido para acessar a lista de conversões privada.
 
-Faça um POST para /login com o seguinte json no corpo do post (a conta t@t.com já foi criada durante o passo "Como instalar o projeto"):
+Faça um `POST /login` com o seguinte json no corpo do post (a conta t@t.com já foi criada durante o passo "Como instalar o projeto"):
 
 ```
   {
@@ -69,7 +69,7 @@ O token será retornado no seguinte formato:
 
 ### Acessando a lista pública de conversões
 
-Para listar todos as conversões públicas, faça uma requisição GET para /convertions/public. Não há necessidade de parametros adicionais.
+Para listar todos as conversões públicas, faça uma requisição `GET /convertions/public`. Não há necessidade de parametros adicionais.
 
 O retorno será no formato abaixo:
 
@@ -98,7 +98,7 @@ O retorno será no formato abaixo:
 
 ### Cadastrando uma convertion pública
 
-Para cadastrar uma conversão, é preciso enviar um POST para /convertions/public, com o seguinte conteudo no corpo do post:
+Para cadastrar uma conversão, é preciso enviar um `POST /convertions/public`, com o seguinte conteudo no corpo do post:
 
 ```
   {
@@ -118,7 +118,7 @@ IMPORTANTE: em caso de uma moeda inválida, o sistema ignorará ela, salvando as
 
 ### Acessando a lista privada de conversões
 
-Para listar todos as conversões privadas, faça uma requisição GET para /convertions/public. Não há necessidade de parametros adicionais. **O header Authorization deve ser passado na requisiçao**:
+Para listar todos as conversões privadas, faça uma requisição `GET /convertions/private`. Não há necessidade de parametros adicionais. **O header Authorization deve ser passado na requisiçao**:
 
 ```
   Authorization: Bearer <TOKEN RESGATADO DURANTE O LOGIN>
@@ -133,7 +133,7 @@ O retorno será no formato abaixo:
       "currency_from": "EUR",
       "currency_to": "BRL",
       "rate": "4.387",
-      "convertion_type": "public_convertion",
+      "convertion_type": "private_convertion",
       "created_at": "2019-08-08T19:45:14.713Z",
       "updated_at": "2019-08-08T19:45:14.713Z"
     },
@@ -142,7 +142,7 @@ O retorno será no formato abaixo:
       "currency_from": "EUR",
       "currency_to": "USD",
       "rate": "1.119",
-      "convertion_type": "public_convertion",
+      "convertion_type": "private_convertion",
       "created_at": "2019-08-08T19:59:21.608Z",
       "updated_at": "2019-08-08T19:59:21.608Z"
     }
@@ -151,7 +151,7 @@ O retorno será no formato abaixo:
 
 ### Cadastrando uma convertion privada
 
-Para cadastrar uma conversão, é preciso enviar um POST para /convertions/public, com o seguinte conteudo no corpo do post:
+Para cadastrar uma conversão, é preciso enviar um `POST /convertions/private`, com o seguinte conteudo no corpo do post:
 
 ```
   {
